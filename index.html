@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الرئيسية | متجر الإلكترونيات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+      <a href="index.html" class="logo">TechStore</a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="active">الرئيسية</a>
+        <a href="shop.html">المتجر</a>
+        <a href="shop.html?cat=mobile">موبايل وتابلت</a>
+        <a href="shop.html?cat=electronics">إلكترونيات</a>
+        <a href="shop.html?cat=accessories">اكسسوارات موبايل</a>
+      </nav>
+
+<div class="search-box">
+  <input
+    type="search"
+    id="searchInput"
+    placeholder="ابحث عن منتج..."
+    aria-label="ابحث عن منتج"
+    autocomplete="off"
+  >
+  <button type="button" id="searchBtn" aria-label="بحث">⌕</button>
+</div>
+
+      <div class="header-actions">
+        <a href="login.html" class="login-link">تسجيل الدخول</a>
+        <button class="cart-btn" id="cartBtn" aria-label="السلة">
+          🛒 <span class="cart-total" id="cartTotal">٠ ج.م.</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer">
+    <button class="icon-btn close-btn" data-close>✕</button>
+    <a href="index.html">الرئيسية</a>
+    <a href="shop.html">المتجر</a>
+    <a href="shop.html?cat=mobile">موبايل وتابلت</a>
+    <a href="shop.html?cat=electronics">إلكترونيات</a>
+    <a href="shop.html?cat=accessories">اكسسوارات موبايل</a>
+    <a href="login.html">تسجيل الدخول</a>
+  </aside>
+
+  <!-- Cart sidebar -->
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-head">
+      <h3>السلة</h3>
+      <button class="icon-btn" data-close>✕</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="cart-foot">
+      <div class="cart-sum"><span>الإجمالي</span><strong id="cartSum">٠ ج.م.</strong></div>
+      <button class="btn btn-block">إتمام الشراء</button>
+    </div>
+  </aside>
+
+  <!-- Hero slider -->
+  <section class="slider" id="slider">
+    <div class="slides" id="slides">
+
+      <div class="slide s1">
+        <img src="image/slide1.webp" alt="سماعة Sound Pro A56">
+      </div>
+
+      <div class="slide s2">
+        <img src="image/slide2.webp" alt="منتجات الإلكترونيات">
+      </div>
+
+      <div class="slide s3">
+        <img src="image/slide3.webp" alt="أحدث المنتجات">
+      </div>
+
+      <div class="slide s4">
+        <img src="image/slide4.webp" alt="عروض وخصومات">
+      </div>
+
+    </div>
+
+    <button class="arrow prev" id="prev" aria-label="السابق">›</button>
+    <button class="arrow next" id="next" aria-label="التالي">‹</button>
+    <div class="dots" id="dots"></div>
+  </section>
+
+
+  <!-- Products -->
+  <main class="container section" id="products">
+    <h2 class="section-title">منتجاتنا</h2>
+    <div class="grid" id="grid" data-limit="4"></div>
+    <div class="center"><a href="shop.html" class="btn btn-outline">شاهد المزيد من منتجاتنا</a></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo">TechStore</a>
+      <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">تسوّق</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">تمت الإضافة إلى السلة ✓</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

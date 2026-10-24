@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تسجيل الدخول | متجر الإلكترونيات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+      <a href="index.html" class="logo">TechStore</a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">المتجر</a>
+        <a href="shop.html?cat=mobile">موبايل وتابلت</a>
+        <a href="shop.html?cat=electronics">إلكترونيات</a>
+        <a href="shop.html?cat=accessories">اكسسوارات موبايل</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="login-link">تسجيل الدخول</a>
+        <button class="cart-btn" id="cartBtn" aria-label="السلة">
+          🛒 <span class="cart-total" id="cartTotal">٠ ج.م.</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer">
+    <button class="icon-btn close-btn" data-close>✕</button>
+    <a href="index.html">الرئيسية</a>
+    <a href="shop.html">المتجر</a>
+    <a href="shop.html?cat=mobile">موبايل وتابلت</a>
+    <a href="shop.html?cat=electronics">إلكترونيات</a>
+    <a href="shop.html?cat=accessories">اكسسوارات موبايل</a>
+    <a href="login.html">تسجيل الدخول</a>
+  </aside>
+
+  <!-- Cart sidebar -->
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-head">
+      <h3>السلة</h3>
+      <button class="icon-btn" data-close>✕</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="cart-foot">
+      <div class="cart-sum"><span>الإجمالي</span><strong id="cartSum">٠ ج.م.</strong></div>
+      <button class="btn btn-block">إتمام الشراء</button>
+    </div>
+  </aside>
+
+  <main class="container section">
+    <h2 class="section-title">تسجيل الدخول</h2>
+    <form class="form-card" data-msg="تم تسجيل الدخول ✓">
+      <div class="field"><label for="u">البريد الإلكتروني</label><input id="u" type="email" required></div>
+      <div class="field"><label for="p">كلمة المرور</label><input id="p" type="password" required></div>
+      <button class="btn btn-block" type="submit">دخول</button>
+      <p class="form-note">ليس لديك حساب؟ <a href="login.html">إنشاء حساب</a></p>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo">TechStore</a>
+      <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">تسوّق</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">تمت الإضافة إلى السلة ✓</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
